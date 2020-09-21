@@ -425,6 +425,7 @@ public final class GenericWorkflowClientExternalImpl implements GenericWorkflowC
     query.setQueryType(queryParameters.getQueryType());
     request.setQuery(query);
     request.setQueryRejectCondition(queryParameters.getQueryRejectCondition());
+    request.setQueryConsistencyLevel(queryParameters.getQueryConsistencyLevel());
     try {
       QueryWorkflowResponse response =
           Retryer.retryWithResult(

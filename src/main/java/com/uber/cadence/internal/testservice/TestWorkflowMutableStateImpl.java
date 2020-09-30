@@ -252,7 +252,7 @@ class TestWorkflowMutableStateImpl implements TestWorkflowMutableState {
   private void setPendingQueries(RequestContext ctx) {
     TestWorkflowStore.DecisionTask decisionTask = ctx.getDecisionTask();
     if (decisionTask != null) {
-      decisionTask.getTask().setQueries(pendingQueries);
+      decisionTask.getTask().setQueries(new HashMap<>(pendingQueries));
     }
   }
 
